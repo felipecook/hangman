@@ -10,7 +10,7 @@ public class Main {
 
     boolean quit = false;
 
-    playGame();
+    printMenu();
 
 
     while (!quit) {
@@ -40,6 +40,17 @@ public class Main {
     int numberOfWords = Integer.parseInt(scanner.nextLine());
     String testString = hangman.generateRandomString(numberOfWords);
     System.out.println(testString);
+
+    System.out.println("Enter a single letter to guess in the randomly generated word: ");
+    String guessingCharAsString = scanner.nextLine();
+    boolean guessCorrect = hangman.guessRandomLetter(guessingCharAsString);
+
+    if (guessCorrect) {
+      System.out.println("You have guessed correctly.");
+    } else {
+      System.out.println("You have guessed incorrectly.");
+    }
+
   }
 
   private static void printMenu() {

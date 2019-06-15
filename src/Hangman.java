@@ -23,7 +23,9 @@ public class Hangman {
     return randomWord;
   }
 
-  boolean guessRandomLetter(char c) {
+  boolean guessRandomLetter(String charAsString) {
+
+    char c = charAsString.charAt(0);
 
     for (int i = 0; i < randomWord.length(); i++) {
       if (randomWord.charAt(i) == c) {
