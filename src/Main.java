@@ -32,18 +32,14 @@ public class Main {
     }
 
 
-
-
-    int numberOfWords = Integer.parseInt(scanner.nextLine());
-
-    String testString = hangman.generateRandomString(numberOfWords);
-    System.out.println(testString);
-
   }
 
   private static void playGame() {
     System.out.println("Hello and welcome to the game of Hangman");
     System.out.println("Please enter the number of words you would like to guess:");
+    int numberOfWords = Integer.parseInt(scanner.nextLine());
+    String testString = hangman.generateRandomString(numberOfWords);
+    System.out.println(testString);
   }
 
   private static void printMenu() {
