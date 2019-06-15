@@ -15,6 +15,7 @@ public class Hangman {
 
       for (int j = 0; j < chars.length; j++) {
         chars[j] = (char) random.nextInt('a' + 27);
+
       }
 
     }
