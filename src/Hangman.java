@@ -2,10 +2,11 @@ import java.util.Random;
 
 public class Hangman {
 
-  private String randomWord;
 
-  public String generateRandomWords(int numberOfWords) {
 
+  public String generateRandomString(int numberOfWords) {
+
+    String randomWord = "";
     Random random = new Random();
     char[] chars = new char[random.nextInt(8) + 3];
 
@@ -16,13 +17,12 @@ public class Hangman {
         chars[j] = (char) random.nextInt('a' + 27);
       }
 
-
     }
 
-    return randomWord = chars.toString();
+    randomWord = String.copyValueOf(chars);
+    return randomWord;
   }
 
 
-
-
 }
+
